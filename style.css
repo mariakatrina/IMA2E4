@@ -1,0 +1,183 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  /* chose this font family as I find they have a
+  more approachable and easygoing aesthetic */
+}
+
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#c62929;
+  --col-04:#e4913d;
+  --col-05:#d0bdaa;
+  /* chose this colour palette as they feel more
+  foodie and scrumptious, almost like colours you'd
+  find in a food menu */
+}
+
+
+body{
+  background-color: var(--col-02);
+  color: var(--col-01);
+  padding: 2vw;
+}
+
+h1 {
+  font-family: Cambria;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: var(--col-04);
+}
+
+a {
+  color: var(--col-04);
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a:hover {
+  color: var(--col-03);
+  text-decoration: none;
+}
+
+hr {
+  margin-bottom: 2vh;
+}
+
+/* assigned a box that contains 'Filters' */
+.filter-box {
+  margin-bottom: 2.5rem;
+}
+
+#list-filter-wrapper{
+  display: inline-flex;
+  flex-direction: column;
+  font-family: Georgia;
+}
+
+.FilterCategoryWrapper{
+  display: flex;
+}
+
+/* this is the filter category heading */
+summary {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 2rem;
+  margin-right: 10rem; 
+  /* added to avoid the text from moving when
+  filter is dropped down */
+  padding-top: .5rem;
+  cursor: pointer;
+}
+
+.FilterSelector {
+  font-size: 2rem;
+  font-family: Georgia;
+  background-color: transparent;
+  color: var(--col-04);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  margin-left: 4rem;
+  margin-top: .3rem;
+  margin-bottom: .2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.FilterSelector:hover {
+  color: var(--col-03);
+}
+
+.FilterSelector:active {
+  color: var(--col-03);
+}
+
+.ActiveCategory {
+  background-color: var(--col-04);
+  color: var(--col-01); 
+}
+
+
+#recipe-list-wrapper{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  word-break: break-all;
+}
+
+.RecipeCardWrapper{
+  height: 40rem;
+  padding: 2.5rem;
+  margin-top: 2rem;
+  border: solid var(--col-02) 5px;
+  background-color: var(--col-01);
+  border-radius: 1rem;
+  /* added radius to create a more organic design */
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.RecipeCardWrapper:hover{
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px #6b6e6e;
+  /* added a box shadow to imitate the motion of
+  picking up a card (like a recipe card from a counter) */
+}
+
+/* I had aligned all text to center to create a visual balance with all elements */
+
+.RecipeImg{
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  height: 75%;
+  margin-bottom: .5rem;
+  border-radius: 10px;
+}
+.RecipeTitle{
+  font-size: 2.5rem;
+  font-family: Cambria;
+  word-break: break-all;
+  margin-top: 1rem;
+  text-align: center;
+}
+.RecipeAuthor{
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: var(--col-02);
+  text-align: center;
+  margin-top: 1rem;
+}
+.attribution {
+  color: var(--col-02);
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+
+/* for screens over 768px wide */
+@media all and (min-width: 768px) {
+  
+  hr {
+    margin-bottom: 2vw;
+  }
+
+  #list-filter-wrapper{
+    flex-direction: row;
+  }
+
+  .FilterSelector {
+    text-align: unset;
+    width: unset;
+  }
+  
+}
